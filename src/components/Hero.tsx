@@ -243,14 +243,14 @@ export const Hero: React.FC<HeroProps> = ({ darkMode, onOpenResume, onOpenHireMe
                       <span>Virtual University of Pakistan</span>
                       <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
                     </div>
-                    <div className="text-sm font-bold truncate mt-0.5">BBIT Student & AI Specialist</div>
+                    <div className="text-sm font-bold truncate mt-0.5">BBIT (2nd Semester) & AI Specialist</div>
                   </div>
                 </div>
 
                 {/* Quick Floating Cards below avatar */}
                 <div className="grid grid-cols-2 gap-2 mt-3">
                   <div className={`p-3 rounded-xl border text-center ${darkMode ? 'bg-slate-950/60 border-slate-800' : 'bg-slate-50 border-slate-200'}`}>
-                    <div className="text-lg font-extrabold text-cyan-400">8+</div>
+                    <div className="text-lg font-extrabold text-cyan-400">11+</div>
                     <div className={`text-xs font-medium ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
                       Featured Projects
                     </div>

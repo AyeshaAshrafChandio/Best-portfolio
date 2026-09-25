@@ -23,9 +23,9 @@ export const PERSONAL_INFO = {
   education: {
     degree: "Bachelor of Business Information Technology (BBIT)",
     institution: "Virtual University of Pakistan",
-    status: "Currently Enrolled",
-    period: "Enrolled",
-    details: "Focusing on Business Information Systems, Data Analytics, Software Architecture, and Applied Artificial Intelligence."
+    status: "2nd Semester (Currently Enrolled)",
+    period: "2nd Semester",
+    details: "Currently in 2nd Semester, focusing on Business Information Systems, Data Analytics, Software Architecture, Database Systems, and Applied Artificial Intelligence."
   }
 };
 
@@ -110,6 +110,42 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
 ];
 
 export const PROJECTS: Project[] = [
+  {
+    id: "hunarmand-worker-app",
+    title: "HunarMand Worker Web App",
+    description: "Digital vocational marketplace & service platform connecting skilled blue-collar workers and craftspeople with verified client service requests.",
+    category: "Full Stack",
+    tags: ["React", "TypeScript", "Tailwind CSS", "Marketplace", "Worker Portal", "AI Automation"],
+    liveDemo: "https://my-hunarman-worker-web-app.ai.studio",
+    githubUrl: "https://github.com/AyeshaAshrafChandio",
+    image: "/src/assets/images/hunarmand_worker_app_1790335709444.jpg",
+    featured: true,
+    architectureDetails: "Full-stack skilled labor marketplace providing worker onboarding, digital service portfolios, skill ratings, client booking pipelines, and responsive mobile-first UI."
+  },
+  {
+    id: "dreamhome-agent",
+    title: "DreamHome AI Agent",
+    description: "Autonomous real estate intelligence agent providing interactive conversational property discovery, valuation estimation, and automated viewing scheduling.",
+    category: "AI & Agents",
+    tags: ["AI Agents", "Google Gemini", "Cloud Run", "FastAPI", "Real Estate", "LangChain"],
+    liveDemo: "https://dreamhome-agent-508342565239.asia-southeast1.run.app",
+    githubUrl: "https://github.com/AyeshaAshrafChandio",
+    image: "/src/assets/images/dreamhome_ai_agent_1790335724519.jpg",
+    featured: true,
+    architectureDetails: "Deployed on Google Cloud Run with containerized FastAPI microservices and Gemini LLM. Incorporates conversational property search, multi-criteria filtering, neighborhood insights, and automated viewing appointment booking."
+  },
+  {
+    id: "cineshield-ai",
+    title: "CineShield AI",
+    description: "AI-driven multimedia safety & cinematic video intelligence platform for automated content classification, age rating, and intellectual property protection.",
+    category: "AI & Agents",
+    tags: ["Computer Vision", "AI Safety", "Cloud Run", "Video Intelligence", "PyTorch", "FastAPI"],
+    liveDemo: "https://cineshield-ai-600509928131.asia-southeast1.run.app",
+    githubUrl: "https://github.com/AyeshaAshrafChandio",
+    image: "/src/assets/images/cineshield_ai_1790335738343.jpg",
+    featured: true,
+    architectureDetails: "Containerized video intelligence engine deployed on Google Cloud Run. Performs multi-modal video frame analysis, copyright risk scoring, sensitive scene detection, and automated compliance auditing."
+  },
   {
     id: "ai-personal-agent-system",
     title: "AI Personal Agent System",
@@ -275,7 +311,7 @@ export const EXPERIENCE_ACHIEVEMENTS: ExperienceItem[] = [
     period: "2023 - Present",
     description: "Building responsive, modern full-stack web applications with Next.js, React, FastAPI, and Tailwind CSS.",
     highlights: [
-      "Developed 8+ full-stack production-ready applications with fast loading speeds.",
+      "Developed 11+ full-stack and AI production applications with fast loading speeds.",
       "Implemented clean glassmorphism UI/UX designs with responsive mobile support.",
       "Integrated secure authentication (OAuth, JWT) and real-time database endpoints."
     ],
@@ -326,7 +362,7 @@ export const EXPERIENCE_ACHIEVEMENTS: ExperienceItem[] = [
 ];
 
 export const STATS = [
-  { label: "AI Agents & Projects", value: "8+", color: "from-cyan-500 to-blue-500" },
+  { label: "AI Agents & Projects", value: "11+", color: "from-cyan-500 to-blue-500" },
   { label: "Tech Stack Tools", value: "35+", color: "from-emerald-500 to-teal-500" },
   { label: "Hackathons & Programs", value: "5+", color: "from-violet-500 to-purple-500" },
   { label: "Certifications", value: "3", color: "from-amber-500 to-orange-500" }

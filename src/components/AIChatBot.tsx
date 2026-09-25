@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Bot, X, Send, Sparkles, User, MessageSquare, Minimize2, Maximize2 } from 'lucide-react';
 import { ChatMessage } from '../types';
+import { generatePortfolioKnowledgeResponse } from '../data/portfolioKnowledge';
 
 interface AIChatBotProps {
   darkMode: boolean;
@@ -27,7 +28,7 @@ export const AIChatBot: React.FC<AIChatBotProps> = ({ darkMode }) => {
     }
   }, [messages, isOpen]);
 
-  const handleSendMessage = async (e?: React.FormEvent) => {
+  const handleSendMessage = (e?: React.FormEvent) => {
     if (e) e.preventDefault();
     if (!inputMessage.trim() || loading) return;
 
@@ -44,36 +45,18 @@ export const AIChatBot: React.FC<AIChatBotProps> = ({ darkMode }) => {
     setMessages((prev) => [...prev, userMsg]);
     setLoading(true);
 
-    try {
-      const response = await fetch('/api/chat', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: userText, history: messages }),
-      });
-
-      const data = await response.json();
-      const replyText = data.reply || "Thank you for asking! Ayesha is an AI Engineer with expertise in Python, LangGraph, FastAPI, and React. Reach out via WhatsApp (+92 318 1227587) or Email!";
-
+    // Natural assistant thinking delay
+    setTimeout(() => {
+      const replyText = generatePortfolioKnowledgeResponse(userText);
       const botMsg: ChatMessage = {
         id: (Date.now() + 1).toString(),
         sender: 'assistant',
         text: replyText,
         timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
       };
-
       setMessages((prev) => [...prev, botMsg]);
-    } catch (err) {
-      console.error('Chat error:', err);
-      const fallbackMsg: ChatMessage = {
-        id: (Date.now() + 1).toString(),
-        sender: 'assistant',
-        text: "Ayesha is an AI Engineer & Full Stack Developer skilled in Python, LangGraph, CrewAI, FastAPI, Next.js, and Google Gemini API. Connect with her directly on WhatsApp: +92 318 1227587!",
-        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-      };
-      setMessages((prev) => [...prev, fallbackMsg]);
-    } finally {
       setLoading(false);
-    }
+    }, 350);
   };
 
   const sampleQuestions = [
@@ -113,7 +96,7 @@ export const AIChatBot: React.FC<AIChatBotProps> = ({ darkMode }) => {
               <div>
                 <h4 className="font-bold text-sm leading-tight">Ayesha's AI Twin</h4>
                 <p className="text-[10px] text-cyan-100 font-medium flex items-center gap-1">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" /> Powered by Gemini API
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" /> AI Portfolio Assistant
                 </p>
               </div>
             </div>
