@@ -111,16 +111,16 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
 
 export const PROJECTS: Project[] = [
   {
-    id: "hunarmand-worker-app",
-    title: "HunarMand Worker Web App",
-    description: "Digital vocational marketplace & service platform connecting skilled blue-collar workers and craftspeople with verified client service requests.",
-    category: "Full Stack",
-    tags: ["React", "TypeScript", "Tailwind CSS", "Marketplace", "Worker Portal", "AI Automation"],
-    liveDemo: "https://my-hunarman-worker-web-app.ai.studio",
+    id: "rescue-student-project",
+    title: "Rescue Student Project",
+    description: "AI-powered student academic and code assistant designed to debug codebases, identify missing features, resolve errors, and help students meet tight project deadlines.",
+    category: "AI & Agents",
+    tags: ["AI Agents", "React", "TypeScript", "Code Debugging", "Gemini API", "Student Portal"],
+    liveDemo: "https://rescue-student-project.ai.studio",
     githubUrl: "https://github.com/AyeshaAshrafChandio",
-    image: "/src/assets/images/hunarmand_worker_app_1790335709444.jpg",
+    image: "/src/assets/images/rescue_student_project_1793526005912.jpg",
     featured: true,
-    architectureDetails: "Full-stack skilled labor marketplace providing worker onboarding, digital service portfolios, skill ratings, client booking pipelines, and responsive mobile-first UI."
+    architectureDetails: "AI student rescue platform featuring intelligent code error diagnosis, automated fix generation, academic project workflow optimization, and interactive step-by-step programming assistance."
   },
   {
     id: "dreamhome-agent",

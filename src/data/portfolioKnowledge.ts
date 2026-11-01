@@ -6,9 +6,9 @@ export function generatePortfolioKnowledgeResponse(message: string): string {
     return "Hello! I am Ayesha Muhammad Ashraf's AI Assistant. Ayesha is an AI Engineer and Full Stack Developer specializing in AI Agents (CrewAI, LangGraph), LLM Workflows (Gemini, Claude, GPT), and modern web platforms. How can I help you today?";
   }
 
-  // Specific Project: HunarMand Worker Web App
-  if (q.includes('hunar') || q.includes('worker') || q.includes('labor') || q.includes('artisan')) {
-    return "The 'HunarMand Worker Web App' is a digital vocational marketplace connecting skilled craftspeople and blue-collar professionals with verified clients. It features verified skills, portfolio showcases, and direct service booking. Live demo: https://my-hunarman-worker-web-app.ai.studio";
+  // Specific Project: Rescue Student Project
+  if (q.includes('rescue') || q.includes('student') || q.includes('debug') || q.includes('academic')) {
+    return "The 'Rescue Student Project' is an AI-powered student academic and code assistant designed to debug codebases, identify missing features, resolve errors, and help students meet tight project deadlines. Live demo: https://rescue-student-project.ai.studio";
   }
 
   // Specific Project: DreamHome AI Agent
@@ -43,7 +43,7 @@ export function generatePortfolioKnowledgeResponse(message: string): string {
 
   // All Projects / Portfolio query
   if (q.includes('project') || q.includes('portfolio') || q.includes('work') || q.includes('built')) {
-    return "Ayesha has built 11+ production projects across AI & Full-Stack, including: 1) HunarMand Worker Web App, 2) DreamHome AI Agent (Cloud Run), 3) CineShield AI (Cloud Run), 4) SkillBridge AI, 5) AI Personal Agent System, 6) Physical AI & Robotics, and 7) FlowID. Explore the Projects section above for live interactive demos!";
+    return "Ayesha has built 11+ production projects across AI & Full-Stack, including: 1) Rescue Student Project, 2) DreamHome AI Agent (Cloud Run), 3) CineShield AI (Cloud Run), 4) SkillBridge AI, 5) AI Personal Agent System, 6) Physical AI & Robotics, and 7) FlowID. Explore the Projects section above for live interactive demos!";
   }
 
   // AI Frameworks & Multi-Agent systems
