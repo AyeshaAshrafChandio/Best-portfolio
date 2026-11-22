@@ -87,7 +87,9 @@ export const Certifications: React.FC<CertificationsProps> = ({ darkMode }) => {
                   src={cert.image}
                   alt={cert.title}
                   referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500"
+                  className={`w-full h-full ${
+                    cert.id === 'cert-ibm-bob-hackathon' ? 'object-contain' : 'object-cover'
+                  } group-hover/img:scale-105 transition-transform duration-500`}
                 />
                 <div className="absolute inset-0 bg-slate-950/40 group-hover/img:bg-slate-950/20 transition-colors flex items-center justify-center opacity-0 group-hover/img:opacity-100">
                   <span className="bg-slate-900/90 text-white px-4 py-2 rounded-xl text-xs font-semibold flex items-center gap-2 border border-slate-700 shadow-xl">

@@ -7,6 +7,12 @@ import digiskillsAiPythonImg from '../assets/images/digiskills_ai_python.png';
 import digiskillsUiuxWebflowImg from '../assets/images/digiskills_uiux_webflow.png';
 import ayeshaProfilePhoto from '../assets/images/ayesha_profile_photo.png';
 import giaicStudentCardImg from '../assets/images/giaic_student_card.png';
+import certQuizOff2026Img from '../assets/images/cert_quizoff_2026.png';
+import certPlacementPrepQuiz2026Img from '../assets/images/cert_placement_prep_quiz_2026.png';
+import certGdgocCyberSecurity2026Img from '../assets/images/cert_gdgoc_cyber_security_2026.png';
+import certNexusQuizBlitz2026Img from '../assets/images/cert_nexus_quiz_blitz_card.png';
+import certGdgocCareerGoogle2026Img from '../assets/images/cert_gdgoc_career_google_2026.png';
+import certIbmBobHackathon2026Img from '../assets/images/cert_ibm_bob_hackathon_2026.png';
 
 export const PERSONAL_INFO = {
   name: "Ayesha Muhammad Ashraf",
@@ -324,6 +330,55 @@ export const CERTIFICATIONS: Certification[] = [
     image: digiskillsUiuxWebflowImg,
     description: "Completed the DigiSkills Training Program (DSTP3.0-Batch-04 Aug 2026-Oct 2026) training in UI/UX & Webflow. Certificate ID: WSEXEGPMK.",
     credentialUrl: "https://digiskills.pk/verify"
+  },
+  {
+    id: "cert-ibm-bob-hackathon",
+    title: "IBM Bob 2.0 Hackathon",
+    issuer: "lablab.ai (NativelyAI)",
+    date: "Sep 25 - 27, 2026",
+    image: certIbmBobHackathon2026Img,
+    description: "Certificate of Completion awarded for completing and submitting a solution based on AI Studio, ChatGPT, Gemini 3 Flash, and IBM in the IBM Bob 2.0 Hackathon (Sep 25 to 27, 2026). Certificate ID: CMULAQMR401G5S601JDX4P3X5."
+  },
+  {
+    id: "cert-gdgoc-cyber-security",
+    title: "3-Days Cyber Security BootCamp",
+    issuer: "GDG On Campus - University Of Karachi",
+    date: "2026",
+    image: certGdgocCyberSecurity2026Img,
+    description: "Certificate of Participation in the 3-Days Cyber Security BootCamp presented by Google Developer Group On Campus - University Of Karachi (with Way to Cyber, IEEE Computer Society Karachi Section & DCS UBIT).",
+    credentialUrl: "https://verification.givemycertificate.com/v/a102fdf9-8981-4047-94e8-640708f60d6f"
+  },
+  {
+    id: "cert-gdgoc-career-google",
+    title: "Career, Challenges & Google",
+    issuer: "GDG On Campus - University Of Karachi",
+    date: "2026",
+    image: certGdgocCareerGoogle2026Img,
+    description: "Certificate of Participation in Career, Challenges & Google organized by Google Developers Group On Campus - University Of Karachi (with IEEE Computer Society & DCS UBIT)."
+  },
+  {
+    id: "cert-quizoff-2026",
+    title: "QuizOff 2026: India's Biggest AI Quiz",
+    issuer: "CampusCrew & Unstop",
+    date: "19 Jul 2026",
+    image: certQuizOff2026Img,
+    description: "Certificate presented for competing in QuizOff 2026: India's Biggest AI Quiz, organised by CampusCrew and hosted on Unstop (Date: 19-JULY-2026)."
+  },
+  {
+    id: "cert-nexus-quiz-blitz",
+    title: "Nexus Quiz Blitz",
+    issuer: "Nexus & Unstop",
+    date: "06 Sep 2026",
+    image: certNexusQuizBlitz2026Img,
+    description: "Certificate of Participation in Nexus Quiz Blitz organized by Nexus (Unstop Official Partner, sponsored by SkillStory by CertifyMe), issued on 06 Sep 2026."
+  },
+  {
+    id: "cert-placement-prep-quiz",
+    title: "Placement Prep Quiz 2026",
+    issuer: "GLA University (GLAU) & Unstop",
+    date: "2026",
+    image: certPlacementPrepQuiz2026Img,
+    description: "Certificate of Participation for participating in Placement Prep Quiz 2026 organised by GLA University (GLAU), Uttar Pradesh, hosted on Unstop."
   }
 ];
 
