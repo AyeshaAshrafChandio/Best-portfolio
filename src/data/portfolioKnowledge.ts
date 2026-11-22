@@ -48,12 +48,12 @@ export function generatePortfolioKnowledgeResponse(message: string): string {
 
   // Education & University
   if (q.includes('education') || q.includes('degree') || q.includes('university') || q.includes('bbit') || q.includes('study') || q.includes('school') || q.includes('semester')) {
-    return "Ayesha is currently in her 2nd Semester of Bachelor of Business Information Technology (BBIT) at the Virtual University of Pakistan, focusing on Business Information Systems, Data Analytics, and Applied AI.";
+    return "Ayesha is currently in her 2nd Semester of Bachelor of Business Information Technology (BBIT) at the Virtual University of Pakistan, and is also currently studying in the 3-year Governor House Sindh IT Initiative (GIAIC) program in Artificial Intelligence, Web 3.0 & Metaverse (in progress).";
   }
 
   // Certifications
   if (q.includes('certificate') || q.includes('cert') || q.includes('governor') || q.includes('giaic')) {
-    return "Ayesha holds the Governor House Sindh Graduate Certificate in Generative AI & Web3 (GIAIC), plus Open University credentials in Artificial Intelligence and Information Technology.";
+    return "Ayesha is currently enrolled and studying in the 3-year Governor House Sindh IT Initiative (GIAIC) program (Batch 1, Q4 — currently in progress), and holds DigiSkills.pk and Open University credentials in Artificial Intelligence and Information Technology.";
   }
 
   // Experience & Hackathons

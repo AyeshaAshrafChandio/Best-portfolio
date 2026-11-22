@@ -1,6 +1,6 @@
 import React from 'react';
 import { PERSONAL_INFO, STATS } from '../data/portfolioData';
-import { GraduationCap, MapPin, Award, BookOpen, Bot, CheckCircle2, Sparkles, User, Globe } from 'lucide-react';
+import { GraduationCap, MapPin, Award, BookOpen, CheckCircle2, Sparkles, User, Globe } from 'lucide-react';
 
 interface AboutProps {
   darkMode: boolean;
@@ -36,8 +36,12 @@ export const About: React.FC<AboutProps> = ({ darkMode }) => {
           }`}>
             <div className="space-y-6">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center text-white">
-                  <Bot className="w-6 h-6" />
+                <div className="w-12 h-12 rounded-xl overflow-hidden border border-cyan-500/30 shrink-0 shadow-md">
+                  <img
+                    src={PERSONAL_INFO.avatarUrl}
+                    alt={PERSONAL_INFO.name}
+                    className="w-full h-full object-cover object-top"
+                  />
                 </div>
                 <div>
                   <h3 className={`text-xl font-bold ${darkMode ? 'text-white' : 'text-slate-900'}`}>
@@ -134,6 +138,21 @@ export const About: React.FC<AboutProps> = ({ darkMode }) => {
                 <p className={`text-xs leading-relaxed ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
                   {PERSONAL_INFO.education.details}
                 </p>
+
+                <div className={`pt-3 mt-3 border-t space-y-1.5 ${darkMode ? 'border-slate-800' : 'border-slate-200'}`}>
+                  <div className="flex items-center justify-between gap-2 flex-wrap">
+                    <h4 className={`text-sm font-bold ${darkMode ? 'text-slate-200' : 'text-slate-800'}`}>
+                      Artificial Intelligence, Web 3.0 &amp; Metaverse (GIAIC)
+                    </h4>
+                    <span className="text-xs text-blue-400 font-medium">Currently Enrolled</span>
+                  </div>
+                  <p className="text-xs text-cyan-400 font-semibold">
+                    Governor House Sindh IT Initiative — 3-Year Program (Currently Studying / In Progress)
+                  </p>
+                  <p className={`text-xs leading-relaxed ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
+                    Currently studying in the 3-year program at Governor House Karachi (Main Campus, Batch 1, Quarter 4 — currently in progress).
+                  </p>
+                </div>
               </div>
             </div>
 
@@ -167,7 +186,7 @@ export const About: React.FC<AboutProps> = ({ darkMode }) => {
                 <div className="flex items-center gap-3">
                   <div className="w-2.5 h-2.5 rounded-full bg-amber-400" />
                   <span className={`text-sm font-medium ${darkMode ? 'text-slate-300' : 'text-slate-700'}`}>
-                    Governor House Sindh IT Initiative Graduate
+                    Governor House Sindh IT Initiative (GIAIC) — Currently Enrolled (3-Year Program)
                   </span>
                 </div>
               </div>

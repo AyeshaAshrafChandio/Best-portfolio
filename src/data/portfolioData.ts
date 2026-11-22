@@ -1,4 +1,12 @@
 import { Project, SkillCategory, Certification, ExperienceItem } from '../types';
+import digiskillsCloudComputingImg from '../assets/images/digiskills_cloud_computing.png';
+import digiskillsMobileGameAppImg from '../assets/images/digiskills_mobile_game_app.png';
+import digiskillsDataAnalyticsImg from '../assets/images/digiskills_data_analytics.png';
+import digiskillsStartupStrategiesImg from '../assets/images/digiskills_startup_strategies.png';
+import digiskillsAiPythonImg from '../assets/images/digiskills_ai_python.png';
+import digiskillsUiuxWebflowImg from '../assets/images/digiskills_uiux_webflow.png';
+import ayeshaProfilePhoto from '../assets/images/ayesha_profile_photo.png';
+import giaicStudentCardImg from '../assets/images/giaic_student_card.png';
 
 export const PERSONAL_INFO = {
   name: "Ayesha Muhammad Ashraf",
@@ -16,7 +24,10 @@ export const PERSONAL_INFO = {
   altEmail: "messageuniversity9@gmail.com",
   linkedIn: "https://www.linkedin.com/in/ayesha-muhammad-ashraf-8402392bb",
   gitHub: "https://github.com/AyeshaAshrafChandio",
-  avatarUrl: "/src/assets/images/ayesha_avatar_1785059722350.jpg",
+  twitterX: "https://x.com/Ayeshamv8iv",
+  instagram: "https://www.instagram.com/butterflyayesha234602?cnvx=bGI0bHN3OHR2Y3o5",
+  googleDeveloper: "https://me.developers.google.com/u/112418880206861072072",
+  avatarUrl: ayeshaProfilePhoto,
   
   aboutMe: "I am an aspiring AI Engineer passionate about Artificial Intelligence, AI Agents, Full Stack Development, AI Automation, and Prompt Engineering. I enjoy building AI-powered applications, automation systems, SaaS products, and modern web applications while continuously learning new technologies through projects, hackathons, and open-source communities.",
   
@@ -235,11 +246,11 @@ export const PROJECTS: Project[] = [
 export const CERTIFICATIONS: Certification[] = [
   {
     id: "cert-governor-house",
-    title: "Governor House Sindh Graduate Certificate",
+    title: "Governor House Sindh IT Initiative (GIAIC) — Enrolled Student",
     issuer: "Governor Sindh IT Initiative (GIAIC)",
-    date: "2024 - 2025",
-    image: "/src/assets/images/cert_governor_house_1785059758020.jpg",
-    description: "Prestigious certification in Generative AI, Web3, Agentic Workflows, and Cloud Native Microservices from the Governor Sindh IT Initiative.",
+    date: "Currently Enrolled (3-Year Program)",
+    image: giaicStudentCardImg,
+    description: "Currently studying in the 3-year Governor Sindh Initiative for Artificial Intelligence, Web 3.0 & Metaverse (GIAIC) program at Governor House Karachi (Main Campus, Batch 1, Q4 — Roll No: 00180932). Program is currently in progress.",
     credentialUrl: "https://www.governor-sindh-giaic.com"
   },
   {
@@ -259,6 +270,60 @@ export const CERTIFICATIONS: Certification[] = [
     image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80",
     description: "Specialized certification in Machine Learning algorithms, Deep Learning frameworks, Natural Language Processing, and Agent SDKs.",
     credentialUrl: "https://www.vu.edu.pk"
+  },
+  {
+    id: "cert-digiskills-cloud-computing",
+    title: "Cloud Computing",
+    issuer: "DigiSkills.pk (Ignite & Virtual University)",
+    date: "Nov 2026",
+    image: digiskillsCloudComputingImg,
+    description: "Completed the DigiSkills Training Program (DSTP3.0-Batch-04 Aug 2026-Oct 2026) training in Cloud Computing. Certificate ID: T5R6XFGMK.",
+    credentialUrl: "https://digiskills.pk/verify"
+  },
+  {
+    id: "cert-digiskills-mobile-game-app",
+    title: "Mobile Game and App Development",
+    issuer: "DigiSkills.pk (Ignite & Virtual University)",
+    date: "Nov 2026",
+    image: digiskillsMobileGameAppImg,
+    description: "Completed the DigiSkills Training Program (DSTP3.0-Batch-04 Aug 2026-Oct 2026) training in Mobile Game and App Development. Certificate ID: XQ67CFPMK.",
+    credentialUrl: "https://digiskills.pk/verify"
+  },
+  {
+    id: "cert-digiskills-data-analytics",
+    title: "Data Analytics and Business Intelligence",
+    issuer: "DigiSkills.pk (Ignite & Virtual University)",
+    date: "Nov 2026",
+    image: digiskillsDataAnalyticsImg,
+    description: "Completed the DigiSkills Training Program (DSTP3.0-Batch-04 Aug 2026-Oct 2026) training in Data Analytics and Business Intelligence. Certificate ID: 8GXDXCJMK.",
+    credentialUrl: "https://digiskills.pk/verify"
+  },
+  {
+    id: "cert-digiskills-startup-strategies",
+    title: "Startup Strategies and Entrepreneurship",
+    issuer: "DigiSkills.pk (Ignite & Virtual University)",
+    date: "Nov 2026",
+    image: digiskillsStartupStrategiesImg,
+    description: "Completed the DigiSkills Training Program (DSTP3.0-Batch-04 Aug 2026-Oct 2026) training in Startup Strategies and Entrepreneurship. Certificate ID: WJJPRPBMK.",
+    credentialUrl: "https://digiskills.pk/verify"
+  },
+  {
+    id: "cert-digiskills-ai-python",
+    title: "Artificial Intelligence using Python",
+    issuer: "DigiSkills.pk (Ignite & Virtual University)",
+    date: "Nov 2026",
+    image: digiskillsAiPythonImg,
+    description: "Completed the DigiSkills Training Program (DSTP3.0-Batch-04 Aug 2026-Oct 2026) training in Artificial Intelligence using Python. Certificate ID: G7JHWNBMK.",
+    credentialUrl: "https://digiskills.pk/verify"
+  },
+  {
+    id: "cert-digiskills-uiux-webflow",
+    title: "UI/UX & Webflow",
+    issuer: "DigiSkills.pk (Ignite & Virtual University)",
+    date: "Nov 2026",
+    image: digiskillsUiuxWebflowImg,
+    description: "Completed the DigiSkills Training Program (DSTP3.0-Batch-04 Aug 2026-Oct 2026) training in UI/UX & Webflow. Certificate ID: WSEXEGPMK.",
+    credentialUrl: "https://digiskills.pk/verify"
   }
 ];
 

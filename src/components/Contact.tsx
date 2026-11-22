@@ -9,8 +9,9 @@ import {
   Linkedin,
   Github,
   CheckCircle2,
-  MessageSquare,
-  Sparkles,
+  AlertCircle,
+  Instagram,
+  Code2,
   Globe
 } from 'lucide-react';
 
@@ -30,16 +31,69 @@ export const Contact: React.FC<ContactProps> = ({ darkMode, preselectedTopic }) 
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setErrorMessage(null);
 
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      const response = await fetch(`https://formsubmit.co/ajax/${PERSONAL_INFO.email}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          _replyto: formData.email,
+          interest: formData.interest,
+          subject: formData.subject || `Portfolio Inquiry: ${formData.interest}`,
+          _subject: `Portfolio Message from ${formData.name}: ${formData.subject || formData.interest}`,
+          message: formData.message,
+          _template: 'table',
+          _captcha: 'false',
+        }),
+      });
+
+      const data = await response.json().catch(() => ({}));
+
+      if (!response.ok || data.success === false || data.success === 'false') {
+        throw new Error(
+          typeof data.message === 'string' && data.message.trim()
+            ? data.message
+            : 'Unable to deliver your message right now. Please try again or email directly.'
+        );
+      }
+
       setSubmitted(true);
-    }, 1200);
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : 'Network error while sending message.';
+      setErrorMessage(msg);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
+
+  const handleResetForm = () => {
+    setSubmitted(false);
+    setErrorMessage(null);
+    setFormData({
+      name: '',
+      email: '',
+      subject: preselectedTopic || '',
+      interest: 'Full-time AI Engineer Role',
+      message: '',
+    });
+  };
+
+  const fallbackMailtoHref = `mailto:${PERSONAL_INFO.email}?subject=${encodeURIComponent(
+    formData.subject || `Portfolio Inquiry: ${formData.interest}`
+  )}&body=${encodeURIComponent(
+    `Name: ${formData.name}\nEmail: ${formData.email}\nTopic: ${formData.interest}\n\n${formData.message}`
+  )}`;
 
   return (
     <section id="contact" className="py-20 relative">
@@ -73,9 +127,9 @@ export const Contact: React.FC<ContactProps> = ({ darkMode, preselectedTopic }) 
 
               {/* Phone & WhatsApp */}
               <a
-                href={`https://wa.me/${PERSONAL_INFO.phoneWhatsApp.replace(/[^0-9]/g, '')}`}
+                href="https://wa.me/923181227587"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className={`flex items-center gap-4 p-4 rounded-xl border transition-all hover:scale-101 ${
                   darkMode
                     ? 'bg-slate-950 border-slate-800 hover:border-emerald-500/50 hover:bg-slate-900'
@@ -138,7 +192,7 @@ export const Contact: React.FC<ContactProps> = ({ darkMode, preselectedTopic }) 
                 <a
                   href={PERSONAL_INFO.linkedIn}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 py-3 rounded-xl font-semibold text-xs text-white bg-[#0A66C2] hover:opacity-90 transition-opacity"
                 >
                   <Linkedin className="w-4 h-4" /> LinkedIn Profile
@@ -146,10 +200,37 @@ export const Contact: React.FC<ContactProps> = ({ darkMode, preselectedTopic }) 
                 <a
                   href={PERSONAL_INFO.gitHub}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 py-3 rounded-xl font-semibold text-xs text-white bg-slate-800 hover:bg-slate-700 transition-colors border border-slate-700"
                 >
                   <Github className="w-4 h-4" /> GitHub Portfolio
+                </a>
+                <a
+                  href={PERSONAL_INFO.twitterX}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 py-3 rounded-xl font-semibold text-xs text-white bg-slate-950 hover:bg-slate-900 transition-colors border border-slate-700"
+                >
+                  <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                  </svg>
+                  X (Twitter)
+                </a>
+                <a
+                  href={PERSONAL_INFO.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 py-3 rounded-xl font-semibold text-xs text-white bg-gradient-to-r from-pink-500 via-rose-500 to-amber-500 hover:opacity-90 transition-opacity"
+                >
+                  <Instagram className="w-4 h-4" /> Instagram
+                </a>
+                <a
+                  href={PERSONAL_INFO.googleDeveloper}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="col-span-2 flex items-center justify-center gap-2 py-3 rounded-xl font-semibold text-xs text-white bg-gradient-to-r from-cyan-600 to-blue-600 hover:opacity-90 transition-opacity"
+                >
+                  <Code2 className="w-4 h-4" /> Google Developer Profile
                 </a>
               </div>
             </div>
@@ -202,8 +283,8 @@ export const Contact: React.FC<ContactProps> = ({ darkMode, preselectedTopic }) 
                   Thank you for reaching out, {formData.name}. Ayesha will review your message and reply back to your email ({formData.email}) shortly.
                 </p>
                 <button
-                  onClick={() => setSubmitted(false)}
-                  className="px-6 py-2.5 rounded-xl font-semibold text-xs text-white bg-emerald-600 hover:bg-emerald-500 transition-colors"
+                  onClick={handleResetForm}
+                  className="px-6 py-2.5 rounded-xl font-semibold text-xs text-white bg-emerald-600 hover:bg-emerald-500 transition-colors cursor-pointer"
                 >
                   Send Another Message
                 </button>
@@ -305,6 +386,23 @@ export const Contact: React.FC<ContactProps> = ({ darkMode, preselectedTopic }) 
                     }`}
                   />
                 </div>
+
+                {errorMessage && (
+                  <div className="p-4 rounded-xl bg-rose-500/10 border border-rose-500/30 text-xs sm:text-sm text-rose-300 space-y-2">
+                    <div className="flex items-start gap-2">
+                      <AlertCircle className="w-4 h-4 text-rose-400 shrink-0 mt-0.5" />
+                      <span>{errorMessage}</span>
+                    </div>
+                    <div>
+                      <a
+                        href={fallbackMailtoHref}
+                        className="inline-flex items-center gap-1.5 font-semibold text-cyan-400 hover:underline"
+                      >
+                        <Mail className="w-3.5 h-3.5" /> Open in your email app to send directly to {PERSONAL_INFO.email}
+                      </a>
+                    </div>
+                  </div>
+                )}
 
                 <button
                   type="submit"

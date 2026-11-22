@@ -26,6 +26,47 @@ export const Certifications: React.FC<CertificationsProps> = ({ darkMode }) => {
           </p>
         </div>
 
+        {/* 6 DigiSkills Certifications Listed Separately */}
+        <div
+          className={`max-w-2xl mx-auto mb-12 rounded-2xl border p-6 transition-colors ${
+            darkMode
+              ? 'bg-slate-900/80 border-slate-800'
+              : 'bg-white border-slate-200 shadow-lg'
+          }`}
+        >
+          <div className="flex items-center justify-between mb-4 pb-3 border-b border-slate-800/40">
+            <span className="text-xs font-semibold text-cyan-400 uppercase tracking-wider">
+              DigiSkills.pk Training Program (DSTP3.0-Batch-04)
+            </span>
+            <span className={`text-xs ${darkMode ? 'text-slate-400' : 'text-slate-500'}`}>
+              Nov 2026
+            </span>
+          </div>
+          <ol className="space-y-2.5">
+            {CERTIFICATIONS.filter((cert) => cert.id.startsWith('cert-digiskills-')).map((cert, index) => (
+              <li key={cert.id} className="block">
+                <button
+                  type="button"
+                  onClick={() => setActiveCert(cert)}
+                  className={`w-full text-left flex items-center justify-between gap-3 px-3.5 py-2.5 rounded-xl border transition-colors cursor-pointer ${
+                    darkMode
+                      ? 'border-slate-800/80 bg-slate-950/50 hover:border-cyan-500/40 text-slate-200'
+                      : 'border-slate-200 bg-slate-50 hover:border-cyan-400 text-slate-800'
+                  }`}
+                >
+                  <span className="flex items-center gap-2.5 text-sm font-semibold">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                    <span>{index + 1}. {cert.title}</span>
+                  </span>
+                  <span className="text-xs font-semibold text-cyan-400 shrink-0">
+                    View
+                  </span>
+                </button>
+              </li>
+            ))}
+          </ol>
+        </div>
+
         {/* Certificate Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {CERTIFICATIONS.map((cert) => (
@@ -45,6 +86,7 @@ export const Certifications: React.FC<CertificationsProps> = ({ darkMode }) => {
                 <img
                   src={cert.image}
                   alt={cert.title}
+                  referrerPolicy="no-referrer"
                   className="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-slate-950/40 group-hover/img:bg-slate-950/20 transition-colors flex items-center justify-center opacity-0 group-hover/img:opacity-100">
@@ -126,6 +168,7 @@ export const Certifications: React.FC<CertificationsProps> = ({ darkMode }) => {
                 <img
                   src={activeCert.image}
                   alt={activeCert.title}
+                  referrerPolicy="no-referrer"
                   className="w-full h-full object-contain"
                 />
               </div>
