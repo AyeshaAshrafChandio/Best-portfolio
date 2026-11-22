@@ -6,13 +6,14 @@ import digiskillsStartupStrategiesImg from '../assets/images/digiskills_startup_
 import digiskillsAiPythonImg from '../assets/images/digiskills_ai_python.png';
 import digiskillsUiuxWebflowImg from '../assets/images/digiskills_uiux_webflow.png';
 import ayeshaProfilePhoto from '../assets/images/ayesha_profile_photo.png';
-import giaicStudentCardImg from '../assets/images/giaic_student_card.png';
+import giaicStudentCardImg from '../assets/images/giaic_student_card_blurred.png';
 import certQuizOff2026Img from '../assets/images/cert_quizoff_2026.png';
 import certPlacementPrepQuiz2026Img from '../assets/images/cert_placement_prep_quiz_2026.png';
 import certGdgocCyberSecurity2026Img from '../assets/images/cert_gdgoc_cyber_security_2026.png';
 import certNexusQuizBlitz2026Img from '../assets/images/cert_nexus_quiz_blitz_card.png';
 import certGdgocCareerGoogle2026Img from '../assets/images/cert_gdgoc_career_google_2026.png';
 import certIbmBobHackathon2026Img from '../assets/images/cert_ibm_bob_hackathon_2026.png';
+import certOpenLearnAi2026Img from '../assets/images/cert_openlearn_ai_2026.png';
 
 export const PERSONAL_INFO = {
   name: "Ayesha Muhammad Ashraf",
@@ -260,22 +261,13 @@ export const CERTIFICATIONS: Certification[] = [
     credentialUrl: "https://www.governor-sindh-giaic.com"
   },
   {
-    id: "cert-open-uni-it",
-    title: "Open University Information Technology Certificate",
-    issuer: "Virtual University / Open University Tech Division",
-    date: "2024",
-    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80",
-    description: "Comprehensive qualification covering Information Technology principles, database systems, software design patterns, and network fundamentals.",
-    credentialUrl: "https://www.vu.edu.pk"
-  },
-  {
     id: "cert-open-uni-ai",
-    title: "Open University Artificial Intelligence Certificate",
-    issuer: "Open University AI Research Division",
-    date: "2024",
-    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80",
-    description: "Specialized certification in Machine Learning algorithms, Deep Learning frameworks, Natural Language Processing, and Agent SDKs.",
-    credentialUrl: "https://www.vu.edu.pk"
+    title: "An introduction to artificial intelligence",
+    issuer: "The Open University (OpenLearn)",
+    date: "15 July 2026",
+    image: certOpenLearnAi2026Img,
+    description: "Statement of participation for completing the 6-hour OpenLearn free course \"An introduction to artificial intelligence\" from The Open University, including mandatory tests (Course Code: LG003_1).",
+    credentialUrl: "https://www.open.edu/openlearn/education-development/ai-matters/content-section-overview"
   },
   {
     id: "cert-digiskills-cloud-computing",

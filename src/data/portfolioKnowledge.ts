@@ -53,7 +53,7 @@ export function generatePortfolioKnowledgeResponse(message: string): string {
 
   // Certifications
   if (q.includes('certificate') || q.includes('cert') || q.includes('governor') || q.includes('giaic')) {
-    return "Ayesha is currently enrolled and studying in the 3-year Governor House Sindh IT Initiative (GIAIC) program (Batch 1, Q4 — currently in progress), and holds DigiSkills.pk and Open University credentials in Artificial Intelligence and Information Technology.";
+    return "Ayesha is currently enrolled and studying in the 3-year Governor House Sindh IT Initiative (GIAIC) program (Batch 1, Q4 — currently in progress), and holds DigiSkills.pk certifications as well as The Open University (OpenLearn) Statement of participation in \"An introduction to artificial intelligence\".";
   }
 
   // Experience & Hackathons
