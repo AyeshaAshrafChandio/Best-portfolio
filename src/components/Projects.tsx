@@ -11,7 +11,7 @@ export const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
   const [activeCategory, setActiveCategory] = useState<string>('All');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-  const categories = ['All', 'AI & Agents', 'Full Stack', 'Webflow & Design', 'Automation'];
+  const categories = ['All', 'AI & Agents', 'Full Stack', 'Games', 'Webflow & Design', 'Automation'];
 
   const filteredProjects = PROJECTS.filter(
     (p) => activeCategory === 'All' || p.category === activeCategory
@@ -65,30 +65,65 @@ export const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
             >
               <div>
                 {/* Image Banner */}
-                <div className="relative aspect-video overflow-hidden bg-slate-950">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-60" />
+                {project.liveDemo ? (
+                  <a
+                    href={project.liveDemo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block relative aspect-video overflow-hidden bg-slate-950"
+                  >
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      referrerPolicy="no-referrer"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-60" />
 
-                  {/* Category Pill */}
-                  <div className="absolute top-3 left-3 bg-slate-950/80 backdrop-blur-md px-3 py-1 rounded-lg border border-slate-800 text-xs font-semibold text-cyan-400">
-                    {project.category}
-                  </div>
-
-                  {project.featured && (
-                    <div className="absolute top-3 right-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs font-bold px-2.5 py-1 rounded-lg shadow-md flex items-center gap-1">
-                      <Sparkles className="w-3 h-3" /> Featured
+                    {/* Category Pill */}
+                    <div className="absolute top-3 left-3 bg-slate-950/80 backdrop-blur-md px-3 py-1 rounded-lg border border-slate-800 text-xs font-semibold text-cyan-400">
+                      {project.category}
                     </div>
-                  )}
-                </div>
+
+                    {project.featured && (
+                      <div className="absolute top-3 right-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs font-bold px-2.5 py-1 rounded-lg shadow-md flex items-center gap-1">
+                        <Sparkles className="w-3 h-3" /> Featured
+                      </div>
+                    )}
+                  </a>
+                ) : (
+                  <div className="relative aspect-video overflow-hidden bg-slate-950">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      referrerPolicy="no-referrer"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-60" />
+
+                    {/* Category Pill */}
+                    <div className="absolute top-3 left-3 bg-slate-950/80 backdrop-blur-md px-3 py-1 rounded-lg border border-slate-800 text-xs font-semibold text-cyan-400">
+                      {project.category}
+                    </div>
+
+                    {project.featured && (
+                      <div className="absolute top-3 right-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs font-bold px-2.5 py-1 rounded-lg shadow-md flex items-center gap-1">
+                        <Sparkles className="w-3 h-3" /> Featured
+                      </div>
+                    )}
+                  </div>
+                )}
 
                 {/* Card Body */}
                 <div className="p-6 space-y-4">
                   <h3 className={`text-xl font-bold ${darkMode ? 'text-white' : 'text-slate-900'} group-hover:text-cyan-400 transition-colors`}>
-                    {project.title}
+                    {project.liveDemo ? (
+                      <a href={project.liveDemo} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                        {project.title}
+                      </a>
+                    ) : (
+                      project.title
+                    )}
                   </h3>
 
                   <p className={`text-sm leading-relaxed line-clamp-3 ${darkMode ? 'text-slate-300' : 'text-slate-600'}`}>
@@ -121,10 +156,10 @@ export const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
                     <a
                       href={project.liveDemo}
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                       className="flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl font-semibold text-xs text-white bg-gradient-to-r from-cyan-500 to-blue-600 hover:shadow-md hover:shadow-cyan-500/25 transition-all text-center"
                     >
-                      <ExternalLink className="w-3.5 h-3.5" /> Live Demo
+                      <ExternalLink className="w-3.5 h-3.5" /> {project.category === 'Games' ? 'Play Game' : 'Live Demo'}
                     </a>
                   ) : (
                     <button

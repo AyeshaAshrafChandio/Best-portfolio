@@ -16,21 +16,6 @@ export function generatePortfolioKnowledgeResponse(message: string): string {
     return "'DreamHome AI Agent' is an autonomous real estate intelligence agent deployed on Google Cloud Run. Powered by Gemini LLM and FastAPI, it delivers conversational property discovery, valuation estimations, and automated viewing scheduling. Live demo: https://dreamhome-agent-508342565239.asia-southeast1.run.app";
   }
 
-  // Specific Project: CineShield AI
-  if (q.includes('cineshield') || q.includes('cine') || q.includes('movie') || q.includes('video safety') || q.includes('moderation') || q.includes('copyright')) {
-    return "'CineShield AI' is an AI-driven multimedia safety and video intelligence platform hosted on Google Cloud Run. It uses computer vision and audio-visual models for automated content moderation, age rating, and intellectual property protection. Live demo: https://cineshield-ai-600509928131.asia-southeast1.run.app";
-  }
-
-  // Specific Project: SkillBridge AI
-  if (q.includes('skillbridge') || q.includes('startup')) {
-    return "'SkillBridge AI' is Ayesha's AI startup concept and hackathon project. It utilizes RAG vector search and LLMs to evaluate resumes, uncover skill gaps against active job markets, and curate personalized AI learning paths. Live demo: https://skillbridge-ai-1.ai.studio";
-  }
-
-  // Specific Project: AI Personal Agent System
-  if (q.includes('personal agent') || q.includes('claude') || q.includes('agent sdk')) {
-    return "'AI Personal Agent System' is an autonomous productivity assistant built with Claude AI, OpenAI Agent SDK, LangGraph, and FastAPI for automated schedule routing, web tool calling, and workflow task orchestration.";
-  }
-
   // Specific Project: Robotics & Physical AI
   if (q.includes('robot') || q.includes('physical ai') || q.includes('humanoid') || q.includes('ros')) {
     return "'Physical AI & Humanoid Robotics' is a research and simulation portal focusing on spatial AI, ROS, computer vision, and PyTorch kinematic models for embodied robotic agents. Live demo: https://2025q4.vercel.app";
@@ -43,7 +28,7 @@ export function generatePortfolioKnowledgeResponse(message: string): string {
 
   // All Projects / Portfolio query
   if (q.includes('project') || q.includes('portfolio') || q.includes('work') || q.includes('built')) {
-    return "Ayesha has built 11+ production projects across AI & Full-Stack, including: 1) Rescue Student Project, 2) DreamHome AI Agent (Cloud Run), 3) CineShield AI (Cloud Run), 4) SkillBridge AI, 5) AI Personal Agent System, 6) Physical AI & Robotics, and 7) FlowID. Explore the Projects section above for live interactive demos!";
+    return "Ayesha has built production projects across AI, Full-Stack, and Interactive Games, including: 1) Rescue Student Project, 2) DreamHome AI Agent (Cloud Run), 3) Physical AI & Robotics, 4) FlowID, 5) Horror Game, and 6) Game Sage. Explore the Projects section above for live interactive demos!";
   }
 
   // AI Frameworks & Multi-Agent systems

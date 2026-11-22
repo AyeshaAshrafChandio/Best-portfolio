@@ -61,7 +61,7 @@ export const AIChatBot: React.FC<AIChatBotProps> = ({ darkMode }) => {
 
   const sampleQuestions = [
     "What AI agent frameworks does she use?",
-    "Tell me about SkillBridge AI startup idea",
+    "Tell me about DreamHome AI Agent",
     "How can I hire Ayesha?",
   ];
 

@@ -2,7 +2,7 @@ export interface Project {
   id: string;
   title: string;
   description: string;
-  category: 'All' | 'AI & Agents' | 'Full Stack' | 'Webflow & Design' | 'Automation';
+  category: 'All' | 'AI & Agents' | 'Full Stack' | 'Games' | 'Webflow & Design' | 'Automation';
   tags: string[];
   liveDemo?: string;
   githubUrl?: string;

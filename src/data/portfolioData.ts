@@ -135,30 +135,6 @@ export const PROJECTS: Project[] = [
     architectureDetails: "Deployed on Google Cloud Run with containerized FastAPI microservices and Gemini LLM. Incorporates conversational property search, multi-criteria filtering, neighborhood insights, and automated viewing appointment booking."
   },
   {
-    id: "cineshield-ai",
-    title: "CineShield AI",
-    description: "AI-driven multimedia safety & cinematic video intelligence platform for automated content classification, age rating, and intellectual property protection.",
-    category: "AI & Agents",
-    tags: ["Computer Vision", "AI Safety", "Cloud Run", "Video Intelligence", "PyTorch", "FastAPI"],
-    liveDemo: "https://cineshield-ai-600509928131.asia-southeast1.run.app",
-    githubUrl: "https://github.com/AyeshaAshrafChandio",
-    image: "/src/assets/images/cineshield_ai_1790335738343.jpg",
-    featured: true,
-    architectureDetails: "Containerized video intelligence engine deployed on Google Cloud Run. Performs multi-modal video frame analysis, copyright risk scoring, sensitive scene detection, and automated compliance auditing."
-  },
-  {
-    id: "ai-personal-agent-system",
-    title: "AI Personal Agent System",
-    description: "AI-powered personal assistant using Claude AI and Agent SDK for workflow automation, tool execution, and daily productivity management.",
-    category: "AI & Agents",
-    tags: ["Python", "Claude AI", "Agent SDK", "FastAPI", "LangGraph", "CrewAI"],
-    liveDemo: "https://skillbridge-ai-1.ai.studio",
-    githubUrl: "https://github.com/AyeshaAshrafChandio",
-    image: "/src/assets/images/ai_agent_project_1785059741756.jpg",
-    featured: true,
-    architectureDetails: "Built using Claude AI, OpenAI Agent SDK, and LangGraph for autonomous task routing, automated calendar management, and web search tool execution."
-  },
-  {
     id: "portfolio-website",
     title: "Portfolio Website",
     description: "Modern, high-performance personal portfolio built with React, Next.js patterns, Tailwind CSS, Framer Motion, and embedded AI Assistant.",
@@ -181,18 +157,6 @@ export const PROJECTS: Project[] = [
     image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80",
     featured: false,
     architectureDetails: "Crafted on Webflow with custom CSS interactions, optimized mobile layout grid, and high aesthetic standard."
-  },
-  {
-    id: "skillbridge-ai",
-    title: "SkillBridge AI (My Startup Idea)",
-    description: "AI-driven learning bridge and skill gap analytics platform connecting aspiring technical talent with active market demands.",
-    category: "AI & Agents",
-    tags: ["Generative AI", "React", "FastAPI", "Vector Search", "Google Gemini", "LangChain"],
-    liveDemo: "https://skillbridge-ai-1.ai.studio",
-    githubUrl: "https://github.com/AyeshaAshrafChandio",
-    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",
-    featured: true,
-    architectureDetails: "Uses Gemini LLM and RAG vector search to evaluate user resumes, match skill gaps against live job markets, and generate customized AI learning paths."
   },
   {
     id: "marketplace-project",
@@ -241,6 +205,30 @@ export const PROJECTS: Project[] = [
     image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
     featured: false,
     architectureDetails: "Secure identity verification workflow with JWT token issuing, multi-factor authentication steps, and automated identity audit logs."
+  },
+  {
+    id: "horror-game",
+    title: "Horror Game",
+    description: "Atmospheric interactive browser horror survival experience featuring suspenseful exploration, dynamic lighting, and immersive sound-driven gameplay.",
+    category: "Games",
+    tags: ["Interactive Game", "Web Game", "TypeScript", "React", "Vercel"],
+    liveDemo: "https://horror-game-bice.vercel.app",
+    githubUrl: "https://github.com/AyeshaAshrafChandio",
+    image: "/src/assets/images/horror_game_banner_1795352172070.jpg",
+    featured: true,
+    architectureDetails: "Browser-based horror game deployed on Vercel with responsive controls, atmospheric visual rendering, suspenseful pacing, and real-time interactive state."
+  },
+  {
+    id: "game-sage",
+    title: "Game Sage",
+    description: "Interactive web strategy and adventure game experience built with modern frontend architecture, responsive game mechanics, and engaging progression.",
+    category: "Games",
+    tags: ["Interactive Game", "Strategy", "React", "TypeScript", "Vercel"],
+    liveDemo: "https://game-sage-xi-40.vercel.app",
+    githubUrl: "https://github.com/AyeshaAshrafChandio",
+    image: "/src/assets/images/game_sage_banner_1795352171623.jpg",
+    featured: true,
+    architectureDetails: "Modern interactive web game deployed on Vercel featuring responsive gameplay mechanics, clean HUD state management, and instant browser playability."
   }
 ];
 
